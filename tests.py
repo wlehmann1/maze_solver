@@ -38,6 +38,12 @@ class Tests(unittest.TestCase):
         num_rows = 8
         m4 = Maze(0, 0, num_rows, num_cols, 10, 10)
         self.assertEqual(m4._cells[0][0].has_top_wall, False)
+    
+    def test_maze_reset_visited(self):
+        num_cols = 5
+        num_rows = 8
+        m5 = Maze(0, 0, num_rows, num_cols, 10, 10)
+        self.assertEqual(m5._cells[2][3].visited, False)
 
 if __name__ == "__main__":
     unittest.main()
